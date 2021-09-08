@@ -24,6 +24,7 @@ function generatePassword() {
   var useUpper = confirm("Do you want to use Upper case letters?");
   var useSpecialChar = confirm("Do you want to use Special characters?");
   var useNum = confirm("Do you want to use Numerial characters?");
+  var count = 0;
 
   if (
     useLower === false &&
@@ -36,20 +37,32 @@ function generatePassword() {
   if (useLower === true) {
     //take chars and concat
     useableOpts = useableOpts.concat(lowerCase);
+    pwResults += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
+    count ++;
   }
   if (useUpper === true) {
     useableOpts = useableOpts.concat(upperCase);
+    pwResults += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
+    count ++;
   }
   if (useSpecialChar === true) {
     useableOpts = useableOpts.concat(specialChar);
+    pwResults += specialChar.charAt(Math.floor(Math.random() * specialChar.length));
+    count ++;
   }
   if (useNum === true) {
     useableOpts = useableOpts.concat(numChar);
+    pwResults += numChar.charAt(Math.floor(Math.random() * numChar.length));
+    count ++;
   }
-
+  
+  // var countOne = useLower + useUpper + specialChar + numChar
+  // var countTwo = pwResults.length 
+  
+console.log(pwResults,count);
   console.log(useableOpts);
 
-  for (var i = 0; i < passLength; i++) {
+  for (var i = 0; i < passLength - count ; i++) {
     var password = Math.floor(useableOpts.length * Math.random());
 
     pwResults += useableOpts.charAt(password);
