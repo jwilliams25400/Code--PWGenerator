@@ -7,7 +7,7 @@ https://www.github.com/JWilliams25400
 
 
 ## Description
-### If makign a new complexed password becoming tiresome? Look no further the my simple password generator. designed to take the guess work out of establishing a new password, please answer the 5 simple questions and the generator will give you a password that fits any criteria.
+### If making a new complexed password becoming tiresome? Look no further the my simple password generator. designed to take the guess work out of establishing a new password, please answer the 5 simple questions and the generator will give you a password that fits any criteria.
 --------------------
 
 ## Technology
